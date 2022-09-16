@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import Person from './components/person'
+import './index.css';
+export class App extends Component {
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  render() {
+    return (
+      <div style={{
+      boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;',
+      position: 'absolute',
+      top: '50%',
+      left: '50%',
+      transform:'translate(-50%,-50%)',
+      background: 'silver',
+      overflow: 'hidden',
+      display: 'flex',
+     
+      }} >
+        <p> <Person/> </p>
+      </div>
+      
+    )
+  }
 }
 
-export default App;
+export default App
